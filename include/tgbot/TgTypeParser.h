@@ -899,7 +899,7 @@ public:
 
 private:
     inline void removeLastComma(std::string& input) const {
-        if (!input.empty() && input.back() == ',') input.erase(input.length() - 1);
+        if (!input.empty() && input.back() == ',') input.pop_back();
     }
 
     template<typename T>
