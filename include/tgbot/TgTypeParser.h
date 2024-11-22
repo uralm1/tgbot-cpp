@@ -907,11 +907,7 @@ private:
         if (!value) {
             return;
         }
-        json += '"';
-        json += varName;
-        json += R"(":)";
-        json += *value;
-        json += ',';
+        appendToJson(json, varName, *value);
     }
 
     template<typename T>
